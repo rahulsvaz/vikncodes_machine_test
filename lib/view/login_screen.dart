@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
 import 'package:vikncodes_machine_test/controller/login_screen_controller.dart';
+import 'package:vikncodes_machine_test/view/constant/pallete.dart';
+import 'package:vikncodes_machine_test/view/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -31,10 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(
               height: height * 0.7,
               width: width,
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                    colors: [Colors.yellow.shade200, Colors.white]),
-              ),
+              decoration: BoxDecoration(gradient: Palette.pink),
             ),
           ),
           Positioned(
@@ -44,8 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: height * 0.6,
               width: width,
               decoration: BoxDecoration(
-                gradient:
-                    RadialGradient(colors: [Colors.pink.shade50, Colors.white]),
+                gradient: Palette.pink,
               ),
             ),
           ),
@@ -57,8 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
               width: width,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                gradient: RadialGradient(
-                    colors: [Colors.blue.shade100, Colors.white]),
+                gradient: Palette.blue,
               ),
             ),
           ),
@@ -94,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const Text(
                   'Login To Your vikn Account',
-                  style: TextStyle(color: Colors.grey, fontSize: 14),
+                  style: TextStyle(color: Palette.grey, fontSize: 14),
                 ),
                 const SizedBox(
                   height: 20,
@@ -105,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        border: Border.all(color: Colors.grey),
+                        border: Border.all(color: Palette.grey),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
@@ -123,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const Divider(
                               thickness: 1.0,
-                              color: Colors.grey,
+                              color: Palette.grey,
                             ),
                             SizedBox(
                               height: 50,
@@ -156,19 +153,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {},
                   child: Text(
                     'Forgotten Password?',
-                    style: TextStyle(color: Colors.blue.shade700, fontSize: 16),
+                    style: TextStyle(color: Palette.blue700, fontSize: 16),
                   ),
                 ),
                 const SizedBox(
                   height: 25,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 140,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.blue.shade600,
+                      color: Palette.blue700,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: const Row(
@@ -191,26 +195,27 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            left: width*0.2,
-            right:width*0.2,
+            left: width * 0.2,
+            right: width * 0.2,
             top: height * .9,
-            child:  Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const  Text(
+                const Text(
                   "Don't Have An Account?",
                   style: TextStyle(color: Colors.black, fontSize: 14),
                 ),
-               const  SizedBox(height: 1,),
-                 TextButton(
+                const SizedBox(
+                  height: 1,
+                ),
+                TextButton(
                   onPressed: () {},
                   child: Text(
                     'Sign Up Now!?',
-                    style: TextStyle(color: Colors.blue.shade700, fontSize: 16),
+                    style: TextStyle(color: Palette.blue700, fontSize: 16),
                   ),
                 ),
-                
               ],
             ),
           )

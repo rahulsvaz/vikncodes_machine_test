@@ -1,21 +1,16 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+class Palette {
+  static RadialGradient yellow =
+      RadialGradient(colors: [Colors.yellow.shade200, Colors.white]);
 
-class Palette{
+  static RadialGradient blue =
+      RadialGradient(colors: [Colors.blue.shade100, Colors.white]);
 
-  static final LinearGradient backGround =  LinearGradient(
-      tileMode: TileMode.decal,
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
+  static RadialGradient pink =
+      RadialGradient(colors: [Colors.pink.shade50, Colors.white]);
 
-      colors: [
-        Colors.yellow.shade50,
-        const  Color.fromRGBO(238, 242, 35, 0.01),
-
-        const Color.fromRGBO(0, 208, 254, 0.1),
-        Colors.purple.shade50,
-
-      ]);
+      static const Color grey = Colors.grey;
+      static  Color blue700 =  Colors.blue.shade700;
+      static const Color black = Colors.black;
 }
