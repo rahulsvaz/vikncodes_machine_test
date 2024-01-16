@@ -182,11 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           'Sign In',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
-                        Icon(
-                          Icons.arrow_forward,
-                          color: Colors.white,
-                          size: 20,
-                        )
+
                       ],
                     ),
                   ),
